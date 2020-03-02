@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'home_page.dart';
+
 void task() => runApp(new TodoApp());
 
 class TodoApp extends StatelessWidget {
@@ -11,6 +13,7 @@ class TodoApp extends StatelessWidget {
     return new MaterialApp(
         title: 'Tasks List',
         home: new TodoList()
+
     );
   }
 }
@@ -152,6 +155,13 @@ class TodoListState extends State<TodoList> {
     return new Scaffold(
       appBar: new AppBar(
           title: new Text('Task List'),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.close),
+            onPressed:  homepage,
+          ),
+        ],
+        leading: new Container(),
       ),
 
       body: _buildTodoList(),
