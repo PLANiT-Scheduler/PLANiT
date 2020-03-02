@@ -23,13 +23,15 @@ class TodoList extends StatefulWidget {
 
 class TodoListState extends State<TodoList> {
   List<String> _todoItems = [];
-  bool clicked = false;
+  List<bool> _dones = [];
+  //bool clicked = false;
 
 
 // Instead of autogenerating a todo item, _addTodoItem now accepts a string
   void _addTodoItem(String task) {
     // Only add the task if the user actually entered something
     if(task.length > 0) {
+      _dones.add(false);
       setState(() => _todoItems.add(task));
     }
   }
@@ -64,6 +66,7 @@ class TodoListState extends State<TodoList> {
   // Much like _addTodoItem, this modifies the array of todo strings and
 // notifies the app that the state has changed by using setState
   void _removeTodoItem(int index) {
+    _dones.removeAt(index);
     setState(() => _todoItems.removeAt(index));
   }
   // Show an alert dialog asking the user to confirm that the task is done
@@ -128,10 +131,10 @@ class TodoListState extends State<TodoList> {
         children: <Widget>[
           GestureDetector(
             onTap: () => setState(() {
-                clicked = !clicked;
+              _dones[index] = !_dones[index];
               }),
             onLongPress: () => _promptRemoveTodoItem(index),
-            child: clicked ? Icon(Icons.check_circle, color: Colors.white) : Icon(Icons.radio_button_unchecked, color: Colors.white),
+            child: _dones[index] ? Icon(Icons.check_circle, color: Colors.white) : Icon(Icons.radio_button_unchecked, color: Colors.white),
           ),
           SizedBox(width: 8),
           Text(
