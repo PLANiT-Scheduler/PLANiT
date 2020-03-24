@@ -22,6 +22,16 @@ class TodoListState extends State<TodoList> {
         child: new Scaffold(
         appBar: new AppBar(
           title: new Text('Task List'),
+          actions: <Widget>[
+            new IconButton(
+              icon: new Icon(Icons.home),
+              onPressed:  () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => MyApp()),
+                );
+              },
+            ),
+          ],
         ),
         body: TaskList(),
         floatingActionButton: new FloatingActionButton(
