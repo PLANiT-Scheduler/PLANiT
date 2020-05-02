@@ -1,0 +1,200 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.cpsc.planit_sprint2"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="28" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/xuanruhe/planit_sprint3/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/Users/xuanruhe/planit_sprint3/android/app/src/debug/AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->/Users/xuanruhe/planit_sprint3/android/app/src/debug/AndroidManifest.xml:7:5-79
+15-->/Users/xuanruhe/planit_sprint3/android/app/src/debug/AndroidManifest.xml:7:22-76
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
+16-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-77
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-81
+17-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-78
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+18-->[:location] /Users/xuanruhe/planit_sprint3/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
+18-->[:location] /Users/xuanruhe/planit_sprint3/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
+19    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->[com.google.firebase:firebase-storage:17.0.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/5a50f856dd8253de7958e65df944ab9a/jetified-firebase-storage-17.0.0/AndroidManifest.xml:26:5-79
+20-->[com.google.firebase:firebase-storage:17.0.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/5a50f856dd8253de7958e65df944ab9a/jetified-firebase-storage-17.0.0/AndroidManifest.xml:26:22-76
+21    <!--
+22 io.flutter.app.FlutterApplication is an android.app.Application that
+23         calls FlutterMain.startInitialization(this); in its onCreate method.
+24         In most cases you can leave this as-is, but you if you want to provide
+25         additional functionality it is fine to subclass or reimplement
+26         FlutterApplication and put your custom class here.
+27    -->
+28    <application
+28-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:8:5-29:19
+29        android:name="io.flutter.app.FlutterApplication"
+29-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:9:9-57
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.0.2] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/d70e24e03f743906bbd7470a4dbfa7d0/core-1.0.2/AndroidManifest.xml:22:18-86
+31        android:debuggable="true"
+32        android:icon="@mipmap/ic_launcher"
+32-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:11:9-43
+33        android:label="planit_sprint2" >
+33-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:10:9-39
+34        <activity
+34-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:12:9-23:20
+35            android:name="com.cpsc.planit_sprint2.MainActivity"
+35-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:13:13-41
+36            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+36-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:16:13-163
+37            android:hardwareAccelerated="true"
+37-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:17:13-47
+38            android:launchMode="singleTop"
+38-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:14:13-43
+39            android:theme="@style/LaunchTheme"
+39-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:15:13-47
+40            android:windowSoftInputMode="adjustResize" >
+40-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:18:13-55
+41            <intent-filter>
+41-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:19:13-22:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:20:17-68
+42-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:20:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:21:17-76
+44-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:21:27-74
+45            </intent-filter>
+46        </activity>
+47        <!--
+48             Don't delete the meta-data below.
+49             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+50        -->
+51        <meta-data
+51-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:26:9-28:33
+52            android:name="flutterEmbedding"
+52-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:27:13-44
+53            android:value="2" />
+53-->/Users/xuanruhe/planit_sprint3/android/app/src/main/AndroidManifest.xml:28:13-30
+54
+55        <service
+55-->[:firebase_storage] /Users/xuanruhe/planit_sprint3/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+56            android:name="com.google.firebase.components.ComponentDiscoveryService"
+56-->[:firebase_storage] /Users/xuanruhe/planit_sprint3/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+57            android:directBootAware="true"
+57-->[com.google.firebase:firebase-common:19.3.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/dee0d58c3dbee186c2d6917585081d30/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+58            android:exported="false" >
+58-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
+59            <meta-data
+59-->[:firebase_storage] /Users/xuanruhe/planit_sprint3/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+60                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+60-->[:firebase_storage] /Users/xuanruhe/planit_sprint3/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
+61                android:value="com.google.firebase.components.ComponentRegistrar" />
+61-->[:firebase_storage] /Users/xuanruhe/planit_sprint3/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+62            <meta-data
+62-->[:firebase_auth] /Users/xuanruhe/planit_sprint3/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+63                android:name="com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar"
+63-->[:firebase_auth] /Users/xuanruhe/planit_sprint3/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
+64                android:value="com.google.firebase.components.ComponentRegistrar" />
+64-->[:firebase_auth] /Users/xuanruhe/planit_sprint3/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+65            <meta-data
+65-->[:cloud_firestore] /Users/xuanruhe/planit_sprint3/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+66                android:name="com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar"
+66-->[:cloud_firestore] /Users/xuanruhe/planit_sprint3/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
+67                android:value="com.google.firebase.components.ComponentRegistrar" />
+67-->[:cloud_firestore] /Users/xuanruhe/planit_sprint3/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+68            <meta-data
+68-->[:firebase_core] /Users/xuanruhe/planit_sprint3/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+69                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar"
+69-->[:firebase_core] /Users/xuanruhe/planit_sprint3/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[:firebase_core] /Users/xuanruhe/planit_sprint3/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+71            <meta-data
+71-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
+72                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+72-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
+74            <meta-data
+74-->[com.google.firebase:firebase-storage:17.0.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/5a50f856dd8253de7958e65df944ab9a/jetified-firebase-storage-17.0.0/AndroidManifest.xml:31:13-33:85
+75                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+75-->[com.google.firebase:firebase-storage:17.0.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/5a50f856dd8253de7958e65df944ab9a/jetified-firebase-storage-17.0.0/AndroidManifest.xml:32:17-107
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.firebase:firebase-storage:17.0.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/5a50f856dd8253de7958e65df944ab9a/jetified-firebase-storage-17.0.0/AndroidManifest.xml:33:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-firestore:21.3.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/9abfce58ad9a42862f320349751164e2/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:20:13-22:85
+78                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+78-->[com.google.firebase:firebase-firestore:21.3.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/9abfce58ad9a42862f320349751164e2/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:21:17-111
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-firestore:21.3.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/9abfce58ad9a42862f320349751164e2/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:22:17-82
+80        </service>
+81
+82        <provider
+82-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-19:20
+83            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+83-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-82
+84            android:authorities="com.cpsc.planit_sprint2.flutter.image_provider"
+84-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-74
+85            android:exported="false"
+85-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+86            android:grantUriPermissions="true" >
+86-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-47
+87            <meta-data
+87-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:75
+88                android:name="android.support.FILE_PROVIDER_PATHS"
+88-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
+89                android:resource="@xml/flutter_image_picker_file_paths" />
+89-->[:image_picker] /Users/xuanruhe/planit_sprint3/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
+90        </provider>
+91
+92        <activity
+92-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
+93            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+93-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:25:13-85
+94            android:excludeFromRecents="true"
+94-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:26:13-46
+95            android:exported="true"
+95-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:27:13-36
+96            android:launchMode="singleTask"
+96-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:28:13-44
+97            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+97-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:29:13-102
+98            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+98-->[com.google.firebase:firebase-auth:19.2.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/a9f77b23b7b09b18dae5ffbc8dfb5e39/firebase-auth-19.2.0/AndroidManifest.xml:30:13-72
+99
+100        <provider
+100-->[com.google.firebase:firebase-common:19.3.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/dee0d58c3dbee186c2d6917585081d30/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+101            android:name="com.google.firebase.provider.FirebaseInitProvider"
+101-->[com.google.firebase:firebase-common:19.3.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/dee0d58c3dbee186c2d6917585081d30/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+102            android:authorities="com.cpsc.planit_sprint2.firebaseinitprovider"
+102-->[com.google.firebase:firebase-common:19.3.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/dee0d58c3dbee186c2d6917585081d30/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+103            android:exported="false"
+103-->[com.google.firebase:firebase-common:19.3.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/dee0d58c3dbee186c2d6917585081d30/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+104            android:initOrder="100" />
+104-->[com.google.firebase:firebase-common:19.3.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/dee0d58c3dbee186c2d6917585081d30/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+105
+106        <activity
+106-->[com.google.android.gms:play-services-base:17.1.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/600586170946e69bbfdbb8edb0d3d534/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+107            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+107-->[com.google.android.gms:play-services-base:17.1.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/600586170946e69bbfdbb8edb0d3d534/play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+108            android:exported="false"
+108-->[com.google.android.gms:play-services-base:17.1.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/600586170946e69bbfdbb8edb0d3d534/play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+109            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+109-->[com.google.android.gms:play-services-base:17.1.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/600586170946e69bbfdbb8edb0d3d534/play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+110
+111        <meta-data
+111-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/0fb71822dd2fc5cc4842d79eb9b908ca/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+112            android:name="com.google.android.gms.version"
+112-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/0fb71822dd2fc5cc4842d79eb9b908ca/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+113            android:value="@integer/google_play_services_version" />
+113-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xuanruhe/.gradle/caches/transforms-2/files-2.1/0fb71822dd2fc5cc4842d79eb9b908ca/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+114    </application>
+115
+116</manifest>

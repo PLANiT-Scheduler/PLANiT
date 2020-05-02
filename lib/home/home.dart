@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:planit_sprint2/services/auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -5,6 +7,7 @@ import 'package:planit_sprint2/model/task_model.dart';
 import 'package:provider/provider.dart';
 import 'package:planit_sprint2/authenticate/user_model.dart';
 import 'dart:math' as math;
+import 'package:weather/weather.dart';
 
 class MenuOptions {
   static const String SignOut = 'Sign out';
@@ -30,14 +33,38 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
     return '${(duration.inMinutes % 60).toString().padLeft(2, '0')}:${(duration.inSeconds % 60).toString().padLeft(2, '0')}';
   }
 
+  String _fahrenheit = 'Unknown';
+  String _icon = 'Unknown';
+  String _area = 'Unkonwn';
+  String key = '9cb178f99559b76d0dfad327b81af1b7';
+  WeatherStation ws;
+
   @override
   void initState() {
     super.initState();
+    ws = new WeatherStation(key);
+    initPlatformState();
     controller = AnimationController(
       vsync: this,
       duration: Duration(seconds: 1500),
     );
   }
+
+  Future<void> initPlatformState() async{
+    queryWeather();
+  }
+
+  void queryWeather() async{
+    Weather w = await ws.currentWeather();
+    int fahrenheit = w.temperature.fahrenheit.round();
+    String icon = w.weatherMain;
+    String area = w.areaName;
+    setState(() {
+      _fahrenheit = fahrenheit.toString();
+      _icon = icon;
+      _area = area;
+    });
+}
 
   @override
   Widget build(BuildContext context) {
@@ -66,13 +93,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  //Add calendar here
-                  ConstrainedBox(
-                    constraints: new BoxConstraints(
-                      minHeight: 280,
-                      maxHeight: 280,
-                    ),
+                  Text(
+                    _area + "     " + _icon + "      " + _fahrenheit + "\u2109",
+                    //textDirection: TextDirection.ltr,
+                    style: TextStyle(fontStyle: FontStyle.normal, fontWeight: FontWeight.bold,
+                                      color: Colors.deepOrangeAccent,
+                                      fontSize: 18)
                   ),
+
+
                   Container(
                     padding: EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
@@ -94,8 +123,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
                             Text(
                                 "Agenda For Today",
                                 style: TextStyle(
-                                    color:Colors.black,
-                                    fontSize: 24
+                                    fontFamily: 'OpenSans',
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold
                                 ),
                             ),
                           ],
@@ -105,11 +135,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
                   Container(
                     padding: EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
+                      //borderRadius: BorderRadius.circular(20.0),
                       color: Colors.white,
-                      border: Border(
-                        top: BorderSide(width: 1.0, color: Colors.black26),
-                        bottom: BorderSide(width: 1.0, color: Colors.black26),
-                      ),
+//                      border: Border(
+//                        top: BorderSide(width: 1.0, color: Colors.black26),
+//                        bottom: BorderSide(width: 1.0, color: Colors.black26),
+//                      ),
                     ),
                     child: StreamBuilder(
                       stream: Firestore.instance.collection('plan').where('User', isEqualTo: user.uid).snapshots(),
@@ -119,7 +150,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
                           ConstrainedBox(
                               constraints: new BoxConstraints(
                                 minHeight: 180,
-                                maxHeight: 293,
+                                maxHeight: 240,
                               ),
                               child:ListView.builder(
                                   itemCount: snapshot.data.documents.length,

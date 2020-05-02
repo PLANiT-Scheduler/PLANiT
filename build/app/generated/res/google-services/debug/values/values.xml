@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">524433277638-3oko72nokj6qi6ch97itjhkdv8olvp4a.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://planit-573b1.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">524433277638</string>
+    <string name="google_api_key" translatable="false">AIzaSyC6SIyeESNTPLrjtFWDAn8xhQzOIkX4nac</string>
+    <string name="google_app_id" translatable="false">1:524433277638:android:fa108acdb00ad7b2270dc7</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC6SIyeESNTPLrjtFWDAn8xhQzOIkX4nac</string>
+    <string name="google_storage_bucket" translatable="false">planit-573b1.appspot.com</string>
+    <string name="project_id" translatable="false">planit-573b1</string>
+</resources>

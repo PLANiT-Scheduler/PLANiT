@@ -52,14 +52,14 @@ class TaskDetailState extends State<TaskDetail>{
               style: TextStyle(
                   fontSize: 24, decoration: TextDecoration.underline, fontWeight: FontWeight.bold)),
         ),
-        Padding(
-          padding: EdgeInsets.only(top: 8.0, left: 16.0, right: 16.0),
-          child: Text(
-              DateFormat.yMEd().add_jm().format(task.date.toDate()), //task.date,
-              textAlign: TextAlign.left,
-              style: TextStyle(
-                  fontSize: 20, color: Colors.blueAccent, fontWeight: FontWeight.bold)),
-        ),
+//        Padding(
+//          padding: EdgeInsets.only(top: 8.0, left: 16.0, right: 16.0),
+//          child: Text(
+//              DateFormat.yMEd().add_jm().format(task.date.toDate()), //task.date,
+//              textAlign: TextAlign.left,
+//              style: TextStyle(
+//                  fontSize: 20, color: Colors.blueAccent, fontWeight: FontWeight.bold)),
+//        ),
         Padding(
           padding: EdgeInsets.only(top: 8.0, left: 16.0, right: 16.0),
           child: Text("Description",
